@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тестовое задание</title>
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <button data-popup="open-popup" class="button">Открыть</button>
+
+        <div class="overlay">
+            <div class="popup" id="open-popup">
+                <div class="popup__content">
+                    <div class="popup__close">&times;</div>
+                    <div class="popup__left">
+                        <img class="popup__img" src="img/image.png" alt="Book">
+                    </div>
+                    <div class="popup__right">
+                        <h1 class="popup__title">мастер-класс?</h1>
+                        <p class="popup__fz14">Скачайте пошаговый план</p>
+                        <h2 class="popup__subtitle">«Как собственнику<br>выйти из операционки»</h2>
+                        <p class="popup__fz14">и познакомьтесь с этим инструментом <span>прямо сейчас</span></p>
+                        <p class="popup__fz12">10 шагов помогут создать системный бизнес</p>
+                        <form class="popup__form" action="/" method="post">
+                            <label for="email">Для получения бонуса введите email</label>
+                            <input type="email" id="email" placeholder="Ваш e-mail">
+                            <a class="popup__form-btn" href="#">Скачать пошаговый план</a>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,228 @@
+@font-face {
+    font-family: "Gotham Pro";
+    src: url(../fonts/GothamPro.woff2),
+        url(../fonts/GothamPro.woff);
+    font-weight: 400;
+    font-display: swap;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Gotham Pro";
+    src: url(../fonts/GothamPro-Bold.woff2),
+        url(../fonts/GothamPro-Bold.woff);
+    font-weight: 700;
+    font-display: swap;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Gotham Pro";
+    src: url(../fonts/GothamPro-Black.woff2),
+        url(../fonts/GothamPro-Black.woff);
+    font-weight: 900;
+    font-display: swap;
+    font-style: normal;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Gotham Pro", sans-serif;
+    font-weight: 400;
+    color: #0D0D0D;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100vw;
+}
+
+.button {
+    width: 180px;
+    height: 50px;
+    background: linear-gradient(92.64deg, #FF5621 29.24%, #F21313 83.67%);
+    color: #fff;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    outline: none;
+    border: none;
+    box-shadow: 0 5px 7px rgba(0, 0, 0, .3);
+    cursor: pointer;
+
+    &:hover {
+        letter-spacing: 3px;
+        opacity: .9;
+    }
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    background-color: rgba(0, 0, 0, .56);
+}
+
+.popup {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 750px;
+    min-height: 450px;
+    background: #fff;
+    border-radius: 20px;
+
+    &__content {
+        display: flex;
+        position: relative;
+    }
+
+    &__close {
+        position: absolute;
+        top: 10px;
+        right: 20px;
+        font-size: 25px;
+        color: #000;
+        text-decoration: none;
+        cursor: pointer;
+
+        &:hover {
+            transform: scale(1.2);
+        }
+    }
+
+    &__left {
+        width: 41%;
+        height: 450px;
+        background-color: #EFEFEF;
+        position: relative;
+        border-radius: 20px 0 0 20px;
+
+        &::before {
+            content: url(../img/text.png);
+            position: absolute;
+            top: 53px;
+            left: 21px;
+            mix-blend-mode: soft-light;
+        }
+
+        &::after {
+            content: url(../img/arrow.svg);
+            position: absolute;
+            bottom: 55px;
+            right: -42px;
+        }
+    }
+
+    &__img {
+        position: absolute;
+        top: 46px;
+        left: -50px;
+    }
+
+    &__right {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        width: 59%;
+        padding: 28px 58px 63px 58px;
+    }
+
+    &__title {
+        font-size: 24px;
+        font-weight: 900;
+        text-transform: uppercase;
+        margin-bottom: 48px;
+    }
+
+    &__fz14 {
+        font-size: 14px;
+        line-height: 13px;
+
+        span {
+            font-weight: 700;
+        }
+    }
+
+    &__subtitle {
+        font-size: 20px;
+        font-weight: 900;
+        line-height: 22px;
+        text-transform: uppercase;
+        margin-top: 7px;
+        margin-bottom: 5px;
+    }
+
+    &__fz12 {
+        font-size: 12px;
+        line-height: 11px;
+        margin-top: 15px;
+        margin-bottom: 34px;
+    }
+
+    &__form {
+        max-width: 323px;
+        height: 67px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        label {
+            font-size: 12px;
+            line-height: 11px;
+            margin-bottom: 6px;
+        }
+
+        input {
+            width: 100%;
+            height: 50px;
+            padding: 18px 16px 19px 15px;
+            outline: none;
+            border: 2px solid #F3CE00;
+            border-radius: 4px;
+            margin-bottom: 15px;
+            font-family: inherit;
+
+            &::placeholder {
+                color: #0D0D0D;
+                font-size: 14px;
+                font-weight: 700;
+            }
+        }
+
+        &-btn {
+            display: block;
+            color: #fff;
+            text-decoration: none;
+            background: linear-gradient(92.64deg, #FF5621 29.24%, #F21313 83.67%);
+            font-size: 16px;
+            font-weight: 900;
+            text-transform: uppercase;
+            border: none;
+            border-radius: 4px;
+            padding: 16px 32px;
+
+            &:hover {
+                background: linear-gradient(92.64deg, #F21313 29.24%, #FF5621 83.67%);
+            }
+        }
+    }
+}
+
+#open-popup {
+    display: none;
+}
