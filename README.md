@@ -1,2 +1,2 @@
-## Тестовое практическое задание "Модальное окно"
-### Демо: https://sbykoderova.github.io/Modal_Test/
+# Тестовое задание на создание модального окна
+### Демо: https://sbykoderova.github.io/test-modal/
